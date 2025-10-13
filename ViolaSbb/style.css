@@ -1,21 +1,19 @@
 body{
   background-color: #cfbba5;
   color: #63523d;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: "marco",'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9em;
   margin: auto 5%;
 }
 
 h1{
   color: #4f3821;
-  font-family: Inter, Helvetica, Arial, Roboto, sans-serif;
+  font-family: "engria", sans-serif;
   font-weight: 900;
   text-align: center;
-  font-size: 50px;
-}
-h2{
-  color: #4f3821;
-  font-weight: 900;
-  margin: 0 auto;
+  font-size: 4em;
 }
 
 #lineatitolo {
@@ -26,20 +24,36 @@ h2{
   margin: 2px auto;
 }
 
+h2{
+  color: #4f3821;
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 0 auto;
+}
+h3{
+  color: #4f3821;
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#foto1{
+  height: 50vh;
+  display: block;
+  margin: auto;
+  border: 6px solid #4f3821;
+}
+
 /*creazione delle colonne di testo*/
 .testo{
   display: flex;
-  gap: 20px;
+  gap: 2em;
 }
 .colonna{
   margin-top: 1.5em;
   text-align: justify;
-}
-#prima{
-  flex: 1; /*prendi una parte dello spazio disponibile*/
-}
-#seconda{
-  flex: 2; /*prendi 2 parti dello spazio disponibile*/
+  flex: 1;
 }
 
 li{
@@ -57,4 +71,46 @@ a{
   color: #4f3821;
   font-family: Inter, Helvetica, Arial, Roboto, sans-serif;
   font-weight: 700;
+}
+
+/*creazione puntini moda*/
+/*decido lo stile e disposizione pallini in css, js si occuperà di creare tanti pallini quanti i dati & le dimensioni in base al count*/
+#graphModes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.pallino{
+  display: flex;
+  position: relative;
+  border-radius: 50%;
+  color: #b8a48c;;
+  background-color: #4f3821;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pallino:hover{
+  transform: scale(1.05);
+}
+
+/*voglio che quando passo sopra al pallino mi dica il count*/
+.pallino::after{
+  content: attr(data-info); /*le informazioni da segnare sono scritte in js, quando creo il pallino*/
+  position: absolute;
+  top: -1.2em;
+  background-color: #b8a48c;
+  color:#4f3821;
+  padding: 0.2em;
+  font-size: 0.3em;
+  opacity: 0;
+}
+
+.pallino:hover::after{
+  opacity: 1;
 }
