@@ -1,0 +1,60 @@
+body{
+  background-color: #cfbba5;
+  color: #63523d;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: auto 5%;
+}
+
+h1{
+  color: #4f3821;
+  font-family: Inter, Helvetica, Arial, Roboto, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+}
+h2{
+  color: #4f3821;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+#lineatitolo {
+  height: 2px;
+  border: none;
+  background-color: #4f3821;
+  padding: none;
+  margin: 2px auto;
+}
+
+/*creazione delle colonne di testo*/
+.testo{
+  display: flex;
+  gap: 20px;
+}
+.colonna{
+  margin-top: 1.5em;
+  text-align: justify;
+}
+#prima{
+  flex: 1; /*prendi una parte dello spazio disponibile*/
+}
+#seconda{
+  flex: 2; /*prendi 2 parti dello spazio disponibile*/
+}
+
+li{
+  list-style:inside;
+  text-align: left;
+}
+a{
+  text-decoration: none;
+  color: #4f3821;
+  font-weight: 600;
+  background-color: #b8a48c;
+}
+
+#totalRows, #validRows, #mean0, #std1, #mode2, #median3, #mean4, #std4{
+  color: #4f3821;
+  font-family: Inter, Helvetica, Arial, Roboto, sans-serif;
+  font-weight: 700;
+}

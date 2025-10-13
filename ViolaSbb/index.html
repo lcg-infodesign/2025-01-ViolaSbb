@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Assignment 1</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <!--libreria per fare calcoli statistici-->
+  <script src="libraries/statistics.min.js"></script>
+</head>
+
+<body>
+  <h1>Assignment</h1>
+
+  <hr id="lineatitolo">
+  <hr id="lineatitolo">
+
+  <div class="testo">
+    <div class="colonna" id="prima">
+      <h2>Today's goal</h2>
+      <p>Dataset for the first assignment of the course
+        Each student should use ITS OWN dataset, DO NOT use someone's else file, search for the folder that has your
+        GitHub username.
+        <br>The goal is the following:
+        <li>Parse the file, find the valid rows (i.e., the rows for which both rules are satisfied, as described below).
+        </li>
+        <li>Create a GitHub page that displays using p5.js the following information:
+        <li><a href="https://en.wikipedia.org/wiki/Mean" target="_blank">Mean</a> of the first column</li>
+        <li><a href="https://en.wikipedia.org/wiki/Standard_deviation" target="_blank">Standard deviation</a> of the second column</li>
+        <li><a href="https://en.wikipedia.org/wiki/Mode_(statistics)" target="_blank">Mode</a> of the third column</li>
+        <li><a href="https://en.wikipedia.org/wiki/Median" target="_blank">Median</a> of the fourth column</li>
+        <li><a href="https://en.wikipedia.org/wiki/Mean" target="_blank">Mean</a> and <a href="https://en.wikipedia.org/wiki/Standard_deviation">Standard deviation</a> of the fifth column</li>
+        You must provide two graphical and two textual representations. You can decide which information is shown in
+        which
+        modality. The fifth and final representation is up to you. For example, as a graphical representation, you could
+        plot a circle whose size depends on the mean of the first column.
+        <br>To identify the valid rows of the dataset:
+        Read the rules that are written in the rules.txt file (again, each student will have ITS OWN rules.txt file!)
+        <br>A row is considered valid if both rules are valid at the same time.
+        <br>Example:
+        <br>1. rule1 -> column0 > 0
+        <br>2. rule2 -> column1 < -5 * 5,-2,1,2,3 is a valid row since both rules are valid * -1,-1,3,4,5 is not a valid
+          row since column0 is negative and thus rule1 is not satisfied. * 5,1,4,5,7 is not a valid row since column1 is
+          greater than 0 and thus rule2 is not satisfied. * -2,3,9,0,1 is not a valid row since neither of the rules are
+          satisfied.</p>
+    </div>
+    <div class="colonna" id="seconda">
+      <h2>Rules</h2>
+      <p>1. column3 is integer 30 <= x < 42 <br>2. column2 > 60</p>
+      <p>starting rows: <span id="totalRows"></span></p>
+      <p>rows after slection: <span id="validRows"></span></p>
+    </div>
+    <div>
+      <h2>Statistics</h2>
+      <p>Mean of column 0: <span id="mean0"></span></p>
+      <p>Standard deviation of column 1: <span id="std1"></span></p>
+      <p>Mode of column 2: <span id="mode2"></span></p>
+      <p>Median of column 3: <span id="median3"></span></p>
+      <p>Mean of column 4: <span id="mean4"></span></p>
+      <p>Standard deviation of column 4: <span id="std4"></span></p>
+    </div>
+  </div>
+
+
+  <!--js deve elaborare quando finisco di caricare la pagina html-->
+  <script src="sketch2.js"></script>
+</body>
+
+</html>
